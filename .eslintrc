@@ -1,28 +1,39 @@
 {
-  "extends": [
-    "airbnb",
-    "plugin:ava/recommended"
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "airbnb"
   ],
-  "parser": "babel-eslint",
-  "plugins": [
-    "ava"
-  ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true
+  "env"     : {
+    "browser" : true
   },
-  "ecmaFeatures": {
-    "jsx": true,
-    "es6": true,
-    "classes": true
+  "globals": {
+    "Action": false,
+    "DEVELOPMENT": false,
+    "PRODUCTION": false,
+    "__DEBUG__": false,
+    "sinon": false,
+    "expect": false,
+    "assert": false,
+    "it": false,
+    "describe": false,
+    "before": false,
+    "after": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "__SERVER_ENV__": false
   },
   "rules": {
-     "comma-dangle": [1, "always-multiline"],
-     "no-underscore-dangle" : 0,
-     "max-len": [1, 180, 4],
-     "arrow-body-style": [0],
-     "react/jsx-no-bind": [0],
-     "import/no-unresolved": [0] // Until import plugin supports webpack 2 resolveModules
+    "semi" : [2, "never"],
+    "max-len": [2, 140, 2],
+    "arrow-body-style": [0, "as-needed"],
+    "no-use-before-define": 0,
+    "new-cap": 0,
+    "no-case-declarations": 0,
+    "no-underscore-dangle": 0,
+    "react/prefer-stateless-function": 0,
+    "newline-per-chained-call": 0,
+    "no-duplicate-imports": 0,
+    "import/no-duplicates": 0,
+    "global-require": 0
   }
 }

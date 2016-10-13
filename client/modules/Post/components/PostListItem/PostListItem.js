@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
+import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
+import { FormattedMessage } from 'react-intl'
 
 // Import Style
-import styles from './PostListItem.css';
+import styles from './PostListItem.css'
 
 function PostListItem(props) {
   return (
@@ -18,7 +18,7 @@ function PostListItem(props) {
       <p className={styles['post-action']}><a href="#" onClick={props.onDelete}><FormattedMessage id="deletePost" /></a></p>
       <hr className={styles.divider} />
     </div>
-  );
+  )
 }
 
 PostListItem.propTypes = {
@@ -30,6 +30,6 @@ PostListItem.propTypes = {
     cuid: PropTypes.string.isRequired,
   }).isRequired,
   onDelete: PropTypes.func.isRequired,
-};
+}
 
-export default PostListItem;
+export default PostListItem
